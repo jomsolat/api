@@ -21,3 +21,5 @@ Example result:
   "isha": "20:39:00"
 }
 ```
+
+Data are parsed and modified (ISO 8601 for date) from JAKIM e-solat API
