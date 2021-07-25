@@ -22,8 +22,8 @@ app.get('/zone/:zoneId', async function (req, res) {
   const date = todaysDate.toISOString().split('T')[0];
 
   await client.connect();
-	const db = client.db('jomsolat');
-	const prayerTime = db.collection('prayertime2');
+  const db = client.db('jomsolat');
+  const prayerTime = db.collection('prayertime2');
   
   prayerTime.findOne({zone: zone, date: date}, function(err, result) {
     if (err) throw err;
