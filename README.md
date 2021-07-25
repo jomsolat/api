@@ -1,5 +1,9 @@
 ## Jom Solat API
 
+Currently hosted at https://api.jomsolat.org/zone/WLY01
+
+Example above is to get today solat time for Kuala Lumpur, Putrajaya (WLY01)
+
 This API has only one endpoint:
 > http://localhost:3000/zone/:zoneId
 
