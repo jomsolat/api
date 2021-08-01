@@ -1,5 +1,27 @@
 ## Jom Solat API
 
+### Quick Start
+Install dependencies
+```
+npm install
+```
+
+Run the app
+```
+node index.js
+```
+
+### Docker
+Build the image
+```
+docker build . -t jomsolat/jomsolat-api
+```
+Run the image
+```
+docker run -p 3000:3000 -d jomsolat/jomsolat-api
+```
+
+
 Currently hosted at https://api.jomsolat.org/zone/WLY01
 
 Example above is to get today solat time for Kuala Lumpur, Putrajaya (WLY01)

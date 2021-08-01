@@ -3,6 +3,7 @@ require('dotenv').config()
 const express = require("express");
 const helmet = require("helmet");
 const app = express();
+const host = process.env.APP_HOST;
 const port = process.env.APP_PORT;
 
 app.use(helmet());
@@ -32,6 +33,5 @@ app.get('/zone/:zoneId', async function (req, res) {
   });
 });
 
-app.listen(port, () => {
-  console.log(`JomSolat API listening at http://localhost:${port}`);
-});
+app.listen(port, host);
+console.log(`Running on http://${host}:${port}`);
