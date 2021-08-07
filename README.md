@@ -1,6 +1,8 @@
 ## Jom Solat API
 
 ### Quick Start
+Copy `.env.example` to `.env` and set your configuration correctly
+
 Install dependencies
 ```
 npm install
