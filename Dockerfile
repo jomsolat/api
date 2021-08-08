@@ -1,5 +1,10 @@
 FROM node:14-alpine
 
+# Set timezone
+RUN apk add --no-cache tzdata
+ENV TZ=Asia/Kuala_Lumpur
+RUN cp /usr/share/zoneinfo/$TZ /etc/localtime
+
 # Create app directory
 WORKDIR /usr/src/app
 
