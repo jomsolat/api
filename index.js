@@ -20,7 +20,10 @@ app.get('/zone/:zoneId', async function (req, res) {
   let zone = req.params.zoneId;
 
   const todaysDate = new Date();
-  const date = todaysDate.toISOString().split('T')[0];
+  const offsetMs = todaysDate.getTimezoneOffset() * 60 * 1000;
+  const msLocal =  todaysDate.getTime() - offsetMs;
+  const dateLocal = new Date(msLocal);
+  const date = dateLocal.toISOString().split('T')[0];
 
   await client.connect();
   const db = client.db('jomsolat');
